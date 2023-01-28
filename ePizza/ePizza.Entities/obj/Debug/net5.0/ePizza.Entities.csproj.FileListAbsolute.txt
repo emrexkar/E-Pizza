@@ -1,0 +1,12 @@
+C:\Users\3T_Bilisim\Desktop\Kurs\e-pizza\ePizza\ePizza.Entities\bin\Debug\net5.0\ePizza.Entities.deps.json
+C:\Users\3T_Bilisim\Desktop\Kurs\e-pizza\ePizza\ePizza.Entities\bin\Debug\net5.0\ePizza.Entities.dll
+C:\Users\3T_Bilisim\Desktop\Kurs\e-pizza\ePizza\ePizza.Entities\bin\Debug\net5.0\ePizza.Entities.pdb
+C:\Users\3T_Bilisim\Desktop\Kurs\e-pizza\ePizza\ePizza.Entities\obj\Debug\net5.0\ePizza.Entities.csproj.AssemblyReference.cache
+C:\Users\3T_Bilisim\Desktop\Kurs\e-pizza\ePizza\ePizza.Entities\obj\Debug\net5.0\ePizza.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\3T_Bilisim\Desktop\Kurs\e-pizza\ePizza\ePizza.Entities\obj\Debug\net5.0\ePizza.Entities.AssemblyInfoInputs.cache
+C:\Users\3T_Bilisim\Desktop\Kurs\e-pizza\ePizza\ePizza.Entities\obj\Debug\net5.0\ePizza.Entities.AssemblyInfo.cs
+C:\Users\3T_Bilisim\Desktop\Kurs\e-pizza\ePizza\ePizza.Entities\obj\Debug\net5.0\ePizza.Entities.csproj.CoreCompileInputs.cache
+C:\Users\3T_Bilisim\Desktop\Kurs\e-pizza\ePizza\ePizza.Entities\obj\Debug\net5.0\ePizza.Entities.dll
+C:\Users\3T_Bilisim\Desktop\Kurs\e-pizza\ePizza\ePizza.Entities\obj\Debug\net5.0\refint\ePizza.Entities.dll
+C:\Users\3T_Bilisim\Desktop\Kurs\e-pizza\ePizza\ePizza.Entities\obj\Debug\net5.0\ePizza.Entities.pdb
+C:\Users\3T_Bilisim\Desktop\Kurs\e-pizza\ePizza\ePizza.Entities\obj\Debug\net5.0\ref\ePizza.Entities.dll

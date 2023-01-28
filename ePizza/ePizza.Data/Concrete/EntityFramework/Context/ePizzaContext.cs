@@ -40,7 +40,7 @@ namespace ePizza.Data.Concrete.EntityFramework.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("");
+            optionsBuilder.UseSqlServer("Server=3THUAWEI1; TrustServerCertificate=True; Database=ePizzaDB; User Id=sa; Password=emrekar123;");
         }
 
         //Db kurallarını burada db oluşurken veriyoruz.
@@ -48,15 +48,19 @@ namespace ePizza.Data.Concrete.EntityFramework.Context
         {
             builder.ApplyConfiguration(new PaymentDetailsMap());
             builder.ApplyConfiguration(new CartMap());
-            //builder.ApplyConfiguration(new ProductMap());
+            builder.ApplyConfiguration(new ProductMap());
             builder.ApplyConfiguration(new ProductTypeMap());
             builder.ApplyConfiguration(new CategoryMap());
             builder.ApplyConfiguration(new AddressMap());
             builder.ApplyConfiguration(new OrderMap());
             builder.ApplyConfiguration(new OrderItemMap());
-            //builder.ApplyConfiguration(new RoleMap());
+            builder.ApplyConfiguration(new RoleMap());
             builder.ApplyConfiguration(new CartMap());
-
+            builder.ApplyConfiguration(new UserMap());
+            builder.ApplyConfiguration(new UserTokenMap());
+            builder.ApplyConfiguration(new UserRoleMap());
+            builder.ApplyConfiguration(new UserLoginMap());
+            builder.ApplyConfiguration(new RoleClaimMap());
         }
     }
 }
