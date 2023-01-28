@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hrCrHRYuvdNccXGPlunEBVXQ8tg4KgDB+E8j6LeLET/AGiaiWSYIX9Uwh75juPKH1XCn9WIvXvvEmRXcqwY/tQ==",
+  "dgSpecHash": "1h9SZMebxgiYHI5stUyToin0k7nVJQfPNvCGGMpIBaywx5Uj9/v8AB5/PWKBGL8pM9E7bDV9W1dmo/GGuFAxvw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\semih\\Desktop\\C# Kodları\\Ders Notları\\ePizza\\ePizza.Data\\ePizza.Data.csproj",
+  "projectFilePath": "C:\\Users\\semih\\Desktop\\C# Kodları\\Devam Eden Projeler\\ePizza\\ePizza.Data\\ePizza.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\semih\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\semih\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.17\\microsoft.aspnetcore.cryptography.internal.5.0.17.nupkg.sha512",

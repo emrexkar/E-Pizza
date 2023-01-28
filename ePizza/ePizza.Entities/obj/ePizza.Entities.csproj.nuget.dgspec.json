@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\semih\\Desktop\\C# Kodları\\Ders Notları\\ePizza\\ePizza.Entities\\ePizza.Entities.csproj": {}
+    "C:\\Users\\semih\\Desktop\\C# Kodları\\Devam Eden Projeler\\ePizza\\ePizza.Entities\\ePizza.Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\semih\\Desktop\\C# Kodları\\Ders Notları\\ePizza\\ePizza.Entities\\ePizza.Entities.csproj": {
+    "C:\\Users\\semih\\Desktop\\C# Kodları\\Devam Eden Projeler\\ePizza\\ePizza.Entities\\ePizza.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\semih\\Desktop\\C# Kodları\\Ders Notları\\ePizza\\ePizza.Entities\\ePizza.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\semih\\Desktop\\C# Kodları\\Devam Eden Projeler\\ePizza\\ePizza.Entities\\ePizza.Entities.csproj",
         "projectName": "ePizza.Entities",
-        "projectPath": "C:\\Users\\semih\\Desktop\\C# Kodları\\Ders Notları\\ePizza\\ePizza.Entities\\ePizza.Entities.csproj",
+        "projectPath": "C:\\Users\\semih\\Desktop\\C# Kodları\\Devam Eden Projeler\\ePizza\\ePizza.Entities\\ePizza.Entities.csproj",
         "packagesPath": "C:\\Users\\semih\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\semih\\Desktop\\C# Kodları\\Ders Notları\\ePizza\\ePizza.Entities\\obj\\",
+        "outputPath": "C:\\Users\\semih\\Desktop\\C# Kodları\\Devam Eden Projeler\\ePizza\\ePizza.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
