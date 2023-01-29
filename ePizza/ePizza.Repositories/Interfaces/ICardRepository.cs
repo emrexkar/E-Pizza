@@ -17,7 +17,7 @@ namespace ePizza.Repositories.Interfaces
         int DeleteProduct(Guid cardId, int productId);
         int DeleteProduct(Guid cardId, int productId, int quantity);
         int UpdateProduct(Guid cardId, int userId);
-
+        int UpdateQuantity(Guid cardId, int quantity,int productId);
 
     }
 }

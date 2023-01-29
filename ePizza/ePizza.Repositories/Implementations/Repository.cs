@@ -1,4 +1,6 @@
 ﻿using ePizza.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,39 +12,84 @@ namespace ePizza.Repositories.Implementations
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        public Task<TEntity> AddAsync(TEntity entity)
+        protected readonly DbContext _context;
+
+        public Repository(DbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<TEntity> DeleteAsync(TEntity entity)
+        public async Task<TEntity> AddAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+            await _context.Set<TEntity>().AddAsync(entity);
+            return entity;
         }
 
-        public Task<TEntity> FindAsync(object id)
+        public async Task<TEntity> DeleteAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+            // Remove asenkron bir metot olmadığından dolayı biz burada task.run kullanarak remove asenkron bir hale getirmiş olduk.
+
+            await Task.Run(() => { _context.Set<TEntity>().Remove(entity); });
+            return entity;
         }
 
-        public Task<IList<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate = null, params Expression<Func<TEntity, object>>[] includeProperties)
+        public async Task<TEntity> FindAsync(object id)
         {
-            throw new NotImplementedException();
+            return await _context.Set<TEntity>().FindAsync();
+
         }
 
-        public Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includeProperties)
+        public async Task<IList<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate = null, params Expression<Func<TEntity, object>>[] includeProperties)
         {
-            throw new NotImplementedException();
+            // eğer where sorgusu yoksa direk liste gönder. Varsa where sorgusunu gönder şeklinde çalışır.
+            IQueryable<TEntity> query = _context.Set<TEntity>();
+            query = query.Where(predicate);
+            // x=>x.CategoryId==id
+
+            if (predicate != null)
+            {
+                query = query.Where(predicate);
+            }
+
+            if (includeProperties.Any())
+            {
+                foreach (var includeProperty in includeProperties)
+                {
+                    query = query.Include(includeProperty);
+                }
+            }
+            return await query.ToListAsync();
         }
 
-        public Task<int> SaveAsync()
+        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includeProperties)
         {
-            throw new NotImplementedException();
+            // where sorgusu IQerable : database seviyesinde where sorugusu yapıp bize ilgili datayı getitir önce where sorgusunu çeker sonra 
+            // sonra gönderir listeyi.
+            IQueryable<TEntity> query = _context.Set<TEntity>();
+            query = query.Where(predicate);
+
+            if (includeProperties.Any())
+            {
+
+                //TODO: Tekrar bakılcak
+                foreach (var includeProperty in includeProperties)
+                {
+                    query = query.Include(includeProperty);
+                }
+            }
+
+            return await query.SingleOrDefaultAsync();
         }
 
-        public Task<TEntity> UpdateAsync(TEntity entity)
+        public async Task<int> SaveAsync()
         {
-            throw new NotImplementedException();
+            return await _context.SaveChangesAsync();
+        }
+
+        public async Task<TEntity> UpdateAsync(TEntity entity)
+        {
+            await Task.Run(() => { _context.Set<TEntity>().Update(entity); });
+            return entity;
         }
     }
 }

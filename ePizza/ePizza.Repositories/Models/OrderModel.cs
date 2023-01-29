@@ -17,7 +17,7 @@ namespace ePizza.Repositories.Models
 
         public string PaymentId { get; set; }
 
-        public string UserID { get; set; }
+        public string UserId { get; set; }
 
         public string Currency { get; set; }
 
